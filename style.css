@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #616161;
+  color: #fff;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#paint-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+#toolbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+#toolbox > button {
+  font-size: 1.5rem;
+}
+#toolbox > button.paint-button.active {
+  background-color: #999;
+}
+
+button.pixel {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  border: none;
+  background-color: #fff;
+  padding: 0;
+}
+button.pixel:hover {
+  background-color: #ddd;
+}
+
+button.pixel.black-pixel {
+  background-color: #000;
+}
+button.pixel.black-pixel:hover {
+  background-color: #333;
+}
+
+#button-pixel-grid {
+  display: grid;
+  // 16 columns, 16 rows
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-gap: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+#binary {
+  display: none;
+}
+#binary.active {
+  display: block;
+}
+
+#binary-ok {
+  display: none;
+}
+#binary-ok.active {
+  display: block;
+}
